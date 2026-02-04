@@ -4,6 +4,8 @@ import { NodeSSH } from 'node-ssh'
 
 const ssh = new NodeSSH()
 
+export const runtime = 'nodejs'
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const file = searchParams.get('file') || 'backup.log'
